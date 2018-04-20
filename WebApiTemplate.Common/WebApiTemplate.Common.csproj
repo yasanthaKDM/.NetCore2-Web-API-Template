@@ -40,17 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBusiness\IValueBusiness.cs" />
+    <Compile Include="IData\IValueData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WebApiTemplate.Business\WebApiTemplate.Business.csproj">
-      <Project>{88e510a7-687d-4a98-9794-357778bcbe5b}</Project>
-      <Name>WebApiTemplate.Business</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WebApiTemplate.Data\WebApiTemplate.Data.csproj">
-      <Project>{75191a5f-fcf9-45a3-8e25-2b65a8c3660c}</Project>
-      <Name>WebApiTemplate.Data</Name>
-    </ProjectReference>
+    <Folder Include="Common\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
