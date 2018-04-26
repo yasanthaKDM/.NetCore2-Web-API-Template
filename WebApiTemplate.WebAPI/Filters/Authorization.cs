@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebApiTemplate.Common.Common;
 
 namespace WebApiTemplate.WebAPI.Filters
 {
@@ -41,12 +42,12 @@ namespace WebApiTemplate.WebAPI.Filters
                 }
             }
 
-            var result = new
+            var result = new Response
             {
                 status = "error",
                 message = "you are not authorized to perform this action"
             };
-            context.Result = new JsonResult(result);
+            context.Result = new ObjectResult(result);
         }
 
         public void OnActionExecuted(ActionExecutedContext context)

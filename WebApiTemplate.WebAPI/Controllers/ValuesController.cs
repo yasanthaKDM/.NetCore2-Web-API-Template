@@ -17,9 +17,9 @@ namespace WebApiTemplate.WebAPI.Controllers
         }
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get()
         {
-            return _valueBusiness.Get();
+            return new ObjectResult(_valueBusiness.Get());
         }
     }
 }

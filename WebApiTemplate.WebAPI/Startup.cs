@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WebApiTemplate.Business;
@@ -23,8 +24,12 @@ namespace WebApiTemplate.WebAPI
         {
             services.AddTransient<IValueData, ValueData>();
             services.AddTransient<IValueBusiness, ValueBusiness>();
-            
-            services.AddMvc();
+
+            services.AddMvc(options =>
+            {
+                options.RespectBrowserAcceptHeader = true; // false by default
+                options.OutputFormatters.Add(new XmlSerializerOutputFormatter());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

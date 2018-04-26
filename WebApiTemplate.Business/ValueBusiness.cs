@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using WebApiTemplate.Common.Common;
 using WebApiTemplate.Common.IBusiness;
 using WebApiTemplate.Common.IData;
 using WebApiTemplate.Data;
@@ -12,7 +13,7 @@ namespace WebApiTemplate.Business
         {
             _valueData = valueData;
         }
-        public IEnumerable<string> Get()
+        public Response Get()
         {
             return _valueData.Get();
         }
