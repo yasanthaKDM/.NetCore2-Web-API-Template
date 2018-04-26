@@ -16,7 +16,7 @@ namespace WebApiTemplate.WebAPI.Controllers
                 status = "error",
                 message = "something went wrong"
             };
-            return new JsonResult(result);
+            return new ObjectResult(result);
         }
     }
 }
