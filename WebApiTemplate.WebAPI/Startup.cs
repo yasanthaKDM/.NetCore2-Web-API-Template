@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WebApiTemplate.Business;
+using WebApiTemplate.Common.Common;
 using WebApiTemplate.Common.IBusiness;
 using WebApiTemplate.Common.IData;
 using WebApiTemplate.Data;
@@ -45,6 +47,11 @@ namespace WebApiTemplate.WebAPI
             }
 
             app.UseMvc();
+            
+            app.Run(async context =>
+            {
+                await context.Response.WriteAsync("Requested resource not found");
+            });
         }
     }
 }
