@@ -5,9 +5,8 @@ using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using WebApiTemplate.Business;
-using WebApiTemplate.Common.Common;
 using WebApiTemplate.Common.IBusiness;
-using WebApiTemplate.Common.IData;
+using WebApiTemplate.Common.IRepository;
 using WebApiTemplate.Data;
 
 namespace WebApiTemplate.WebAPI
@@ -24,7 +23,7 @@ namespace WebApiTemplate.WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IValueData, ValueData>();
+            services.AddTransient<IValueRepository, ValueRepository>();
             services.AddTransient<IValueBusiness, ValueBusiness>();
 
             services.AddMvc(options =>

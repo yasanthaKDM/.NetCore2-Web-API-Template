@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ValueData.cs" />
+    <Compile Include="ValueRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebApiTemplate.Common\WebApiTemplate.Common.csproj">

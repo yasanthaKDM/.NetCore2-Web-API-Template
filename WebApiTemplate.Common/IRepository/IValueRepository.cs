@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using WebApiTemplate.Common.Common;
 
-namespace WebApiTemplate.Common.IData
+namespace WebApiTemplate.Common.IRepository
 {
-    public interface IValueData
+    public interface IValueRepository
     {
         Response Get();
     }

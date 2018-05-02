@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WebApiTemplate.Common.Common;
-using WebApiTemplate.Common.IData;
+﻿using WebApiTemplate.Common.Common;
+using WebApiTemplate.Common.IRepository;
 
 namespace WebApiTemplate.Data
 {
-    public class ValueData : IValueData
+    public class ValueRepository : IValueRepository
     {
         public Response Get()
         {

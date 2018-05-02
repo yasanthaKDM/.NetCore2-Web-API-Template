@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="Common\Response.cs" />
     <Compile Include="IBusiness\IValueBusiness.cs" />
-    <Compile Include="IData\IValueData.cs" />
+    <Compile Include="IRepository\IValueRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

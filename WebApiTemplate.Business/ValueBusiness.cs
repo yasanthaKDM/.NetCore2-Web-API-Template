@@ -1,21 +1,19 @@
-﻿using System.Collections.Generic;
-using WebApiTemplate.Common.Common;
+﻿using WebApiTemplate.Common.Common;
 using WebApiTemplate.Common.IBusiness;
-using WebApiTemplate.Common.IData;
-using WebApiTemplate.Data;
+using WebApiTemplate.Common.IRepository;
 
 namespace WebApiTemplate.Business
 {
     public class ValueBusiness : IValueBusiness
     {
-        private IValueData _valueData;
-        public ValueBusiness(IValueData valueData)
+        private IValueRepository _valueRepo;
+        public ValueBusiness(IValueRepository valueRepo)
         {
-            _valueData = valueData;
+            _valueRepo = valueRepo;
         }
         public Response Get()
         {
-            return _valueData.Get();
+            return _valueRepo.Get();
         }
     }
 }
