@@ -40,9 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\BasicAuth.cs" />
     <Compile Include="Common\Response.cs" />
     <Compile Include="IBusiness\IValueBusiness.cs" />
     <Compile Include="IData\IValueData.cs" />
+    <Compile Include="IModels\IApplicationSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

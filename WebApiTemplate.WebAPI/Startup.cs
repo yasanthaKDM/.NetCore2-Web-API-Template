@@ -8,7 +8,9 @@ using WebApiTemplate.Business;
 using WebApiTemplate.Common.Common;
 using WebApiTemplate.Common.IBusiness;
 using WebApiTemplate.Common.IData;
+using WebApiTemplate.Common.IModels;
 using WebApiTemplate.Data;
+using WebApiTemplate.WebAPI.Models;
 
 namespace WebApiTemplate.WebAPI
 {
@@ -24,6 +26,8 @@ namespace WebApiTemplate.WebAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IApplicationSettings, ApplicationSettings>();
+
             services.AddTransient<IValueData, ValueData>();
             services.AddTransient<IValueBusiness, ValueBusiness>();
 

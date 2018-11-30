@@ -6,7 +6,7 @@ using WebApiTemplate.WebAPI.Filters;
 
 namespace WebApiTemplate.WebAPI.Controllers
 {
-    [Authorization]
+    [BasicAuthorization]
     [Route("api/[controller]")]
     public class ValuesController : ControllerBase
     {
